@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'RedCloth'
+require 'lorem'
+require 'faker'
 require 'sinatra'
 require 'staticizer'
 
@@ -16,7 +18,7 @@ end
 
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :"../stylesheets/#{params[:name]}", :style => :compact, :load_paths => [File.join(Sinatra.application.options.views, 'stylesheets')]
+  sass :"../stylesheets/#{params[:name]}", :style => :compact, :load_paths => [File.join(Sinatra::Application.options.views, 'stylesheets')]
 end
 
 get '/' do
@@ -44,9 +46,9 @@ helpers do
   end
   
   def bodyselectors
-    klass = "oldbrowser " unless browser?(:firefox) || browser?(:safari)
-    klass += "blueprint"
+    klass = "blueprint"
     klass += " #{@body_class}" if @bodyclass
+    klass += " oldbrowser" unless browser?(:firefox) || browser?(:safari)
     if @bodyid && klass
       {:id => @bodyid, :class => klass}
     elsif @bodyid
@@ -65,5 +67,23 @@ helpers do
       "framer"
     end
   end
+
+  def lorem(type, amount)
+    if type == :paragraph
+      RedCloth.new(Faker::Lorem.paragraph(amount)).to_html
+    elsif type == :paragraphs
+      # for some reason, faker doesn't work with paragraphs...
+      RedCloth.new(Lorem::Base.new('paragraphs', amount).output).to_html
+    elsif type == :sentence
+      Faker::Lorem.sentence(amount)
+    elsif type == :sentences
+      Faker::Lorem.sentences(amount)
+    elsif type == :words
+      Faker::Lorem.words(amount)
+    else
+      "You've got no lorems"
+    end
+  end
+  
   
 end

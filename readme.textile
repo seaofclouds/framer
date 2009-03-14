@@ -1,1 +1,8 @@
 h2. framer is a web craftsman's tool, making a light task of creating prototypes and wireframes of websites.
+
+h3. install
+
+grab it from "http://github.com/seaofclouds/framer":http://github.com/seaofclouds/framer
+
+%sudo gem install RedCloth lorem sinatra%
+
