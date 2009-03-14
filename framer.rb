@@ -16,7 +16,7 @@ end
 
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :"stylesheets/#{params[:name]}", :style => :compact, :load_paths => [File.join(Sinatra.application.options.views, 'stylesheets')]
+  sass :"../stylesheets/#{params[:name]}", :style => :compact, :load_paths => [File.join(Sinatra.application.options.views, 'stylesheets')]
 end
 
 get '/' do
@@ -44,7 +44,8 @@ helpers do
   end
   
   def bodyselectors
-    klass = "oldbrowser" unless browser?(:firefox) || browser?(:safari)
+    klass = "oldbrowser " unless browser?(:firefox) || browser?(:safari)
+    klass += "blueprint"
     klass += " #{@body_class}" if @bodyclass
     if @bodyid && klass
       {:id => @bodyid, :class => klass}

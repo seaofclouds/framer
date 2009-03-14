@@ -1,7 +1,8 @@
 require 'rubygems'
-require 'compass'
 require 'RedCloth'
 require 'sinatra'
+gem 'chriseppstein-compass', '~> 0.5'
+require 'compass'
 require 'staticizer'
 
 use Staticizer, "./static"
