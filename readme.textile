@@ -4,5 +4,5 @@ h3. install
 
 grab it from "http://github.com/seaofclouds/framer":http://github.com/seaofclouds/framer
 
-%sudo gem install RedCloth lorem sinatra%
+%sudo gem install RedCloth lorem faker sinatra%
 

@@ -1,28 +1,21 @@
+$LOAD_PATH.unshift('../sinatra/lib') #use latest version of sinatra
+
 require 'rubygems'
 require 'RedCloth'
-require 'lorem'
+require 'lorem' #required until i can fix faker's paragraphs
 require 'faker'
 require 'sinatra'
 require 'staticizer'
 
 use Staticizer, "./static"
-
-module Sinatra
-  module Sass
-  private
-    def render_sass(content, options = {})
-      ::Sass::Engine.new(content, options).render
-    end
-  end
-end
-
+  
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :"../stylesheets/#{params[:name]}", :style => :compact, :load_paths => [File.join(Sinatra::Application.options.views, 'stylesheets')]
+  sass :"stylesheets/#{params[:name]}", :sass => {:style => :compact, :load_paths => [File.join(Sinatra::Application.views, 'stylesheets')]}
 end
 
 get '/' do
-  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :layout_lite
+  haml RedCloth.new(File.read('./readme.textile')).to_html, :layout => :layout_lite
 end
 
 get '/:name' do
