@@ -72,12 +72,26 @@ helpers do
       RedCloth.new(Lorem::Base.new('paragraphs', amount).output).to_html
     elsif type == :sentence
       Faker::Lorem.sentence(amount)
+    elsif type == :title
+      Faker::Lorem.sentence(amount).gsub('.','')
     elsif type == :sentences
-      Faker::Lorem.sentences(amount)
+      Faker::Lorem.sentences(amount).join(' ')
     elsif type == :words
-      Faker::Lorem.words(amount)
+      Faker::Lorem.words(amount).join(' ')
     else
       "You've got no lorems"
+    end
+  end
+  
+  def name(type)
+    if type == :full
+      Faker::Name.name
+    elsif type == :first
+      Faker::Name.first_name
+    elsif type == :last
+      Faker::Name.last_name
+    elsif type == :user
+      Faker::Lorem.words(2)
     end
   end
   
@@ -88,6 +102,7 @@ helpers do
       "<a href='javascript:void(0);' class='"+action+"'>"+text+"</a>"
     end
   end
+  
 end
 
 
@@ -97,10 +112,17 @@ get '/stylesheets/:name.css' do
 end
 
 get '/' do
-  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :layout_lite
+  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
+end
+
+get '/demo' do
+  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
+end
+
+get '/demo/:name' do
+  haml :"demo/#{params[:name]}".to_sym, :layout => :"demo/layout"
 end
 
 get '/:name' do
   haml params[:name].to_sym
 end
-

@@ -1,0 +1,20 @@
+%h2 Use lorem ipsum for placeholder text
+  
+.demo.container
+  .example
+    %h3= lorem(:title, 5)
+    %p
+      by
+      = name(:full)
+      (#{name(:user)})
+    = lorem(:paragraph, 6)
+  %textarea.snippet
+    :plain
+      %h3= lorem(:title, 5)
+      %p
+        by
+        = name(:full)
+        = name(:user)
+      = lorem(:paragraph, 6)
+
+  
