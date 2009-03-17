@@ -1,6 +1,7 @@
 .showgrid
   :background-image url(/images/grid-transparent.png) !important
-  
+  +showgrid("/images/grid-transparent.png")
+  +blueprint-debug("/images/grid-transparent.png")
 a
   :outline none
   &:active
@@ -9,16 +10,21 @@ a
 #framer_tools
   :position absolute
   :top 0em
-  +column(4)
+  +column(4.5)
+  +prepend(.5)
+  +append(.5)
+  :background-color #333
+  :color #fff
+  h1,h2,h3,h4,h5,a
+    :color #fff
+  #framer_menu
+    +container
+    :padding-top 1.5em
   #framer_colors
-    div
+    .swatch
       :margin-bottom 1em
-    .blueprint_grid_columns 
-      :background-color = !blueprint_grid_columns
-    .blueprint_grid_width   
-      :background-color = !blueprint_grid_width
-    .blueprint_grid_margin  
-      :background-color = !blueprint_grid_margin
+      div
+        +column(1)
     .font_color             
       :background-color = !font_color
     .quiet_color            
