@@ -10,7 +10,7 @@ class Staticizer
   def call(env)
     status, headers, body = @app.call(env)
     
-    if status != 200
+    if status == 404 || status == 500
 
     elsif status == 200
       filename = File.join(@cache_path, env['PATH_INFO'])

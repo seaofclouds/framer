@@ -1,0 +1,27 @@
+!blueprint_grid_columns = 24
+!blueprint_grid_width = 10px
+!blueprint_grid_margin = 10px
+
+!font_color            ||= #fff
+!quiet_color           ||= !font_color + #222
+!loud_color            ||= !font_color - #222
+!header_color          ||= !font_color - #111
+!link_color            ||= #fff
+!link_hover_color      ||= #ddd
+
+@import compass/reset.sass
+@import compass/utilities.sass
+@import blueprint/screen.sass
+@import tools.sass
+
++blueprint
+
+body
+  :background-color #3C4414
+  .container
+    h1,h2,h3
+      :font-weight bold
+    .files
+      :padding-bottom 1em
+    code
+      +prepend(1)

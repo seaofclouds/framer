@@ -1,26 +1,22 @@
+APP_ROOT = File.dirname(File.expand_path(__FILE__)) unless defined?(APP_ROOT)
 $LOAD_PATH.unshift('../sinatra/lib') #use latest version of sinatra
 
 require 'rubygems'
 require 'RedCloth'
 require 'lorem' #required until i can fix faker's paragraphs
 require 'faker'
+require 'compass'
 require 'sinatra'
+require 'haml'
 require 'staticizer'
 
 use Staticizer, "./static"
-  
-get '/stylesheets/:name.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  sass :"stylesheets/#{params[:name]}", :sass => {:style => :compact, :load_paths => [File.join(Sinatra::Application.views, 'stylesheets')]}
-end
 
-get '/' do
-  haml RedCloth.new(File.read('./readme.textile')).to_html, :layout => :layout_lite
-end
+# set variables
+set :app_file, __FILE__
+set :root, File.dirname(__FILE__)
+set :views, "views"
 
-get '/:name' do
-  haml params[:name].to_sym
-end
 
 helpers do
   
@@ -40,7 +36,7 @@ helpers do
   
   def bodyselectors
     klass = "blueprint"
-    klass += " #{@body_class}" if @bodyclass
+    klass += " #{@bodyclass}" if @bodyclass
     klass += " oldbrowser" unless browser?(:firefox) || browser?(:safari)
     if @bodyid && klass
       {:id => @bodyid, :class => klass}
@@ -78,5 +74,26 @@ helpers do
     end
   end
   
-  
+  def link_to(type,action,text)
+    if type == 'view'
+      "<a href='"+action+"' alt='go to "+text+"'>"+text+"</a>"
+    elsif type == 'js'
+      "<a href='javascript:void(0);' class='"+action+"'>"+text+"</a>"
+    end
+  end
 end
+
+
+get '/stylesheets/:name.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass(:"stylesheets/#{params[:name]}", :sass => { :load_paths => ( [ File.join(Sinatra::Application.views, 'stylesheets') ] + Compass::Frameworks::ALL.map { |f| f.stylesheets_directory } ) } )
+end
+
+get '/' do
+  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :layout_lite
+end
+
+get '/:name' do
+  haml params[:name].to_sym
+end
+

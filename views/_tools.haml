@@ -1,0 +1,36 @@
+#framer_tools
+  #framer_colors
+    .blueprint_grid_columns
+    .blueprint_grid_width
+    .blueprint_grid_margin
+    .font_color           
+    .quiet_color          
+    .loud_color           
+    .header_color         
+    .link_color           
+    .link_hover_color     
+    .link_focus_color     
+    .link_active_color    
+    .link_visited_color   
+    .feedback_border_color
+    .success_color        
+    .success_bg_color     
+    .success_border_color 
+    .notice_color         
+    .notice_bg_color      
+    .notice_border_color  
+    .error_color          
+    .error_bg_color       
+    .error_border_color   
+    .highlight_color      
+    .added_color          
+    .added_bg_color       
+    .removed_color        
+    .removed_bg_color     
+    
+  #framer_menu
+    = link_to 'js', 'togglegrid', 'grid'
+    
+- unless browser?(:firefox) || browser?(:safari)
+  #framer_browser
+    %h2 Please view these wireframes in <a href='http://www.firefox.com/'>Firefox</a> or <a href='http://www.apple.com/safari/download/'>Safari</a> to ensure optimal viewing.

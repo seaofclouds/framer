@@ -1,8 +1,27 @@
-h2. framer is a web craftsman's tool, making a light task of creating prototypes and wireframes of websites.
+h1. framer
 
-h3. install
+h2. a web craftsman's tool, making a light task of creating prototypes and wireframes of websites.
 
-grab it from "http://github.com/seaofclouds/framer":http://github.com/seaofclouds/framer
+h3. Download
 
-%sudo gem install RedCloth lorem faker sinatra%
+<div class="files container">
+  <a href="http://github.com/seaofclouds/framer/zipball/master"><img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+  <a href="http://github.com/seaofclouds/framer/tarball/master"><img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+  <a href="http://github.com/seaofclouds/framer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+</div>
 
+h3. Install
+
+h4. *1.* install the latest haml gem
+
+@git clone git://github.com/nex3/haml.git@
+@cd haml@
+@sudo rake install@
+
+h4. *2.* install compass gem
+
+@sudo gem install chriseppstein-compass --source=http://gems.github.com/@
+
+h4. *3.* install other required gems
+
+@sudo gem install RedCloth lorem faker sinatra@
