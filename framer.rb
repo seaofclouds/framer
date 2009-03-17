@@ -105,7 +105,6 @@ helpers do
   
 end
 
-
 get '/stylesheets/:name.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :"stylesheets/#{params[:name]}", :sass => Compass.sass_engine_options
