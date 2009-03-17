@@ -14,9 +14,7 @@ h3. Install
 
 h4. *1.* install the latest haml gem
 
-@git clone git://github.com/nex3/haml.git@
-@cd haml@
-@sudo rake install@
+@git clone git://github.com/nex3/haml.git@<br />@cd haml@<br />@sudo rake install@<br />
 
 h4. *2.* install compass gem
 

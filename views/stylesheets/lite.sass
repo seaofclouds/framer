@@ -1,5 +1,5 @@
-!blueprint_grid_columns = 24
-!blueprint_grid_width = 10px
+!blueprint_grid_columns = 12
+!blueprint_grid_width = 30px
 !blueprint_grid_margin = 10px
 
 !font_color            ||= #fff
@@ -14,14 +14,20 @@
 @import blueprint/screen.sass
 @import tools.sass
 
+!background ||= #3C4414
+
 +blueprint
 
 body
-  :background-color #3C4414
-  .container
+  :background-color = !background
+  #wrap
+    +prepend(1)
+    +append(1)
     h1,h2,h3
       :font-weight bold
     .files
       :padding-bottom 1em
     code
-      +prepend(1)
+      :background-color = !background - #111
+      +fixed-width-text
+      +prepend(.5)
