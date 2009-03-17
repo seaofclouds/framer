@@ -1,6 +1,6 @@
 h1. framer
 
-h2. a web craftsman's tool, making a light task of creating prototypes and wireframes of websites.
+h2. a web craftsman's tool, making a light task of creating wireframes and prototypes of websites.
 
 h3. Download
 

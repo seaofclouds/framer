@@ -1,4 +1,4 @@
-!blueprint_grid_columns = 12
+!blueprint_grid_columns = 15
 !blueprint_grid_width = 30px
 !blueprint_grid_margin = 10px
 
@@ -22,9 +22,10 @@ body
   :background-color = !background
   #wrap
     +prepend(1)
-    +append(1)
     h1,h2,h3
       :font-weight bold
+    h1
+      :padding-top .5em
     .files
       :padding-bottom 1em
     code
