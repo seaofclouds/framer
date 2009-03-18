@@ -22,11 +22,7 @@ h2. Usage
 
 h3. *1.* install
 
-@git clone git://github.com/nex3/haml.git@<br />
-@cd haml@<br />
-@sudo rake install@<br />
-@sudo gem install chriseppstein-compass --source=http://gems.github.com/@<br />
-@sudo gem install RedCloth lorem faker sinatra@
+@git clone git://github.com/nex3/haml.git@<br />@cd haml@<br />@sudo rake install@<br />@sudo gem install chriseppstein-compass --source=http://gems.github.com/@<br />@sudo gem install RedCloth lorem faker sinatra@
 
 if you haven't already downloaded framer, get it with git:
 
@@ -34,8 +30,7 @@ if you haven't already downloaded framer, get it with git:
 
 h3. *2.* run it
 
-@cd framer@<br />
-@ruby framer.app@
+@cd framer@<br />@ruby framer.app@
 
 h3. *3.* haxxxx!
 
@@ -50,9 +45,9 @@ Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer
 h2. Thanks
 
 * "blake mizerany":http://github.com/bmizerany, for sinatra. awesome, awesome sinatra.
-* "hampton catlin":http://hamptoncatlin.com for haml, sass and making my life so much easier.
+* "hampton catlin":http://github.com/hcatlin for haml, sass and making my life so much easier.
 * "chris eppstein":http://github.com/chriseppstein, for compass. without it, i never would have used blueprint.
-* "christian montoya":http://christianmontoya.com for Blueprint
+* "christian montoya":http://christianmontoya.com for blueprint
 * to all you CSS developers out there who strive for something better, and easier
 * "leffe":http://images.google.com/images?oe=UTF-8&sourceid=navclient&gfns=1&q=leffe%20beer&um=1&ie=UTF-8&sa=N&hl=en&tab=wi for refreshing breaks during development
 
