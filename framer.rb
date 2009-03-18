@@ -113,6 +113,7 @@ end
 # define demo pages
 
 get '/' do
+  @bodyid = "demo"
   haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
 end
 
