@@ -117,10 +117,12 @@ get '/' do
 end
 
 get '/demo' do
+  @bodyid = "demo"
   haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
 end
 
 get '/demo/:name' do
+  @bodyid = "demo-#{params[:name]}"
   haml :"demo/#{params[:name]}".to_sym, :layout => :"demo/layout"
 end
 
@@ -134,5 +136,6 @@ end
 # define app pages
  
 get '/:name' do
+  @bodyid = "#{params[:name]}"
   haml params[:name].to_sym
 end

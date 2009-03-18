@@ -9,12 +9,12 @@
 !link_color            ||= #fff
 !link_hover_color      ||= #ddd
 
+!background ||= #3C4414
+
 @import compass/reset.sass
 @import compass/utilities.sass
 @import blueprint/screen.sass
 @import tools.sass
-
-!background ||= #3C4414
 
 +blueprint
 
@@ -36,3 +36,18 @@ body
       :background-color = !background - #111
       +prepend(.5)
   :padding-bottom 4em
+#demo-lorem
+  .demo
+    +container
+    .example
+      +column(6)
+    .snippet
+      +column(7)
+      +prepend(1)
+      :background-image url(/images/demo/arrow-left.gif)
+      :background-repeat no-repeat
+      :background-position left center
+      textarea
+        :border none
+        :height 150px
+        
