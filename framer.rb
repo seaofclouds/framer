@@ -105,10 +105,12 @@ helpers do
   
 end
 
-get '/stylesheets/:name.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  sass :"stylesheets/#{params[:name]}", :sass => Compass.sass_engine_options
+not_found do
+  headers["Status"] = "301 Moved Permanently"
+  redirect("/")
 end
+
+# define demo pages
 
 get '/' do
   haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
@@ -122,6 +124,15 @@ get '/demo/:name' do
   haml :"demo/#{params[:name]}".to_sym, :layout => :"demo/layout"
 end
 
+# define stylesheets
+
+get '/stylesheets/:name.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :"stylesheets/#{params[:name]}", :sass => Compass.sass_engine_options
+end
+
+# define app pages
+ 
 get '/:name' do
   haml params[:name].to_sym
 end

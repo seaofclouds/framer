@@ -1,11 +1,14 @@
 h1. framer
 
-h5. a web craftsman's tool, making a light task of creating wireframes and prototypes of websites.
+h5(intro). a web craftsman's tool, making a light task of creating wireframes and prototypes of websites.
 
 h2. Features
 
+* Powered with "Compass":http://compass-style.org/, "Blueprint":http://blueprintcss.org/, "HAML, SASS":http://haml.hamptoncatlin.com/, "jQuery":http://jquery.com/, "Sinatra":http://www.sinatrarb.com/, and "Ruby":http://www.ruby-lang.org/en/.
 * Lorem Ipsum generator to quickly place text.
-* 
+* Fake content with "faker":http://faker.rubyforge.org/, and make it easy to design a user-centered experience.
+* Helpers make everything from generating links to dropping placeholder images a few keystrokes away.
+* Design palette for easy color reference, grid toggling and other bits.
 
 h2. Download
 
@@ -15,16 +18,33 @@ h2. Download
   <a href="http://github.com/seaofclouds/framer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
 </div>
 
-h3. Install
+h2. Usage
 
-h4. *1.* install the latest haml gem
+h3. *1.* install
 
-@git clone git://github.com/nex3/haml.git@<br />@cd haml@<br />@sudo rake install@<br />
-
-h4. *2.* install compass gem
-
+@git clone git://github.com/nex3/haml.git@
+@cd haml@
+@sudo rake install@
 @sudo gem install chriseppstein-compass --source=http://gems.github.com/@
-
-h4. *3.* install other required gems
-
 @sudo gem install RedCloth lorem faker sinatra@
+
+if you haven't already downloaded framer, get it with git:
+
+@git clone git://github.com/seaofclouds/framer.git@
+
+h3. *2.* run it
+
+@cd framer@
+@ruby framer.app@
+
+h3. *3.* haxxxx!
+
+*framer* is new and in active development. It's improving, and can use your help!
+
+h2. Contribute
+
+Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer and help us develop new features for tweet!
+
+@git clone git://github.com/seaofclouds/tweet.git@
+
+h2. "Licensed under the MIT License":http://www.opensource.org/licenses/mit-license.php
