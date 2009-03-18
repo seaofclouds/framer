@@ -22,10 +22,10 @@ h2. Usage
 
 h3. *1.* install
 
-@git clone git://github.com/nex3/haml.git@
-@cd haml@
-@sudo rake install@
-@sudo gem install chriseppstein-compass --source=http://gems.github.com/@
+@git clone git://github.com/nex3/haml.git@<br />
+@cd haml@<br />
+@sudo rake install@<br />
+@sudo gem install chriseppstein-compass --source=http://gems.github.com/@<br />
 @sudo gem install RedCloth lorem faker sinatra@
 
 if you haven't already downloaded framer, get it with git:
@@ -34,7 +34,7 @@ if you haven't already downloaded framer, get it with git:
 
 h3. *2.* run it
 
-@cd framer@
+@cd framer@<br />
 @ruby framer.app@
 
 h3. *3.* haxxxx!
