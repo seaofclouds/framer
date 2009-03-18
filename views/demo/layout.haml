@@ -11,5 +11,11 @@
     %link{:href=>"/stylesheets/demo.css", :media=>"screen", :rel=>"stylesheet", :type=>"text/css"}/
   %body{bodyselectors}
     #wrap.container
+      - unless @bodyid == "demo"
+        #header
+          &#x21E4;
+          = link_to("view", "/demo", "Demo")
+          &#x2192;
+          = link_to("view", "#{params[:name]}", "#{params[:name]}")
       = yield
     = partial :tools
