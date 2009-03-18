@@ -47,4 +47,14 @@ Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer
 
 @git clone git://github.com/seaofclouds/tweet.git@
 
+h2. Thanks
+
+* "blake mizerany":http://github.com/bmizerany, for sinatra. awesome, awesome sinatra.
+* "hampton catlin":http://hamptoncatlin.com for haml, sass and making my life so much easier.
+* "chris eppstein":http://github.com/chriseppstein, for compass. without it, i never would have used blueprint.
+* "christian montoya":http://christianmontoya.com for Blueprint
+* to all you CSS developers out there who strive for something better, and easier
+* "leffe":http://images.google.com/images?oe=UTF-8&sourceid=navclient&gfns=1&q=leffe%20beer&um=1&ie=UTF-8&sa=N&hl=en&tab=wi for refreshing breaks during development
+
 h2. "Licensed under the MIT License":http://www.opensource.org/licenses/mit-license.php
+
