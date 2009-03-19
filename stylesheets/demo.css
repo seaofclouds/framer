@@ -11,8 +11,8 @@ table { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inhe
 
 a img { border: none; }
 
-.showgrid { background-image: url(/images/grid-transparent.png) !important; background: url(/images/grid-transparent.png); }
-.showgrid .showgrid { background: url(/images/grid-transparent.png); }
+.showgrid { background-image: url(/framer/images/grid-transparent.png) !important; background: url(/framer/images/grid-transparent.png); }
+.showgrid .showgrid { background: url(/framer/images/grid-transparent.png); }
 
 a { outline: none; }
 a:active { outline: none; }
@@ -378,7 +378,7 @@ body #wrap code { background-color: #2b3303; padding-left: 20px; }
 body #wrap .demo { width: 590px; margin: 0 auto; overflow: auto; overflow: -moz-scrollbars-none; display: inline-block; }
 body #wrap .demo { display: block; }
 body #wrap .demo .example { float: left; width: 230px; margin-right: 10px; }
-body #wrap .demo .snippet { float: left; width: 270px; margin-right: 10px; padding-left: 40px; background-image: url(/images/demo/arrow-left.png); background-repeat: no-repeat; background-position: left top; }
+body #wrap .demo .snippet { float: left; width: 270px; margin-right: 10px; padding-left: 40px; background-image: url(/framer/images/demo/arrow-left.png); background-repeat: no-repeat; background-position: left top; }
 body #wrap .demo .snippet textarea { border: none; height: 150px; width: 300px; color: #2b3303; }
 body #header { padding-bottom: 1em; padding-top: 1em; }
 body #header p { border: 1px solid #fff; }
