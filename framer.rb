@@ -107,8 +107,8 @@ helpers do
     end
   end
   
-  def media(type,width,height,text)
-    "<div class='media media-"+type.to_s+" media-width-"+width.to_s.gsub(/\./im, '_')+" media-height-"+height.to_s.gsub(/\./im, '_')+"'><p class='media-size'>"+width.to_s+"w x "+height.to_s+"h</p><p class='media-text'>"+text+"</p></div>"
+  def media(type,id,width,height,text)
+    "<div id='"+id.to_s+"' class='media media-"+type.to_s+"'><img class='media-crosshair' src='/images/image-cross-hair.png' width='"+width.to_s+"' height='"+height.to_s+"' /><p class='media-size'>"+width.to_s+"w x "+height.to_s+"h</p><p class='media-text'>"+text+"</p></div>"
   end
   
 end
