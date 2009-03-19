@@ -40,10 +40,6 @@ helpers do
   def partial(page, options={})
     haml "_#{page}".to_sym, options.merge!(:layout => false)
   end
-  
-  def demo(page, options={})
-    haml "demo/_#{page}".to_sym, options.merge!(:layout => false)
-  end
     
   def bodyselectors
     klass = "blueprint"
@@ -127,11 +123,6 @@ end
 
 get '/demo' do
   haml :"demo/index".to_sym, :layout => :"demo/layout"
-end
-
-get '/demo/:name' do
-  @bodyid = "demo-#{params[:name]}"
-  haml :"demo/_#{params[:name]}".to_sym, :layout => :"demo/layout"
 end
 
 # define stylesheets
