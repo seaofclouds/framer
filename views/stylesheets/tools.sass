@@ -7,6 +7,31 @@ a
   &:active
     :outline none
 
+.media
+  :background-color #fff
+  :color #fff
+  :text-align right
+  :position relative
+  :border-style solid 
+  :border-color #777
+  :border-width 1px
+  p
+    :position absolute
+    :background-color #777
+    :padding .5em
+    &.media-size
+      :top 0em
+      :left 0em
+    &.media-text
+      :bottom 0em
+      :right 0em
+      :margin-bottom 0
+  &.media-width-5
+    +column(6)
+  &.media-height-3
+    :height 12em
+  
+      
 #framer_tools
   :position absolute
   :top 0em

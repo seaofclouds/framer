@@ -41,6 +41,10 @@ helpers do
     haml "_#{page}".to_sym, options.merge!(:layout => false)
   end
   
+  def demo(page, options={})
+    haml "demo/_#{page}".to_sym, options.merge!(:layout => false)
+  end
+    
   def bodyselectors
     klass = "blueprint"
     klass += " #{@bodyclass}" if @bodyclass
@@ -103,6 +107,10 @@ helpers do
     end
   end
   
+  def media(type,width,height,text)
+    "<div class='media media-"+type.to_s+" media-width-"+width.to_s.gsub(/\./im, '_')+" media-height-"+height.to_s.gsub(/\./im, '_')+"'><p class='media-size'>"+width.to_s+"w x "+height.to_s+"h</p><p class='media-text'>"+text+"</p></div>"
+  end
+  
 end
 
 not_found do
@@ -118,12 +126,12 @@ get '/' do
 end
 
 get '/demo' do
-  redirect("/")
+  haml :"demo/index".to_sym, :layout => :"demo/layout"
 end
 
 get '/demo/:name' do
   @bodyid = "demo-#{params[:name]}"
-  haml :"demo/#{params[:name]}".to_sym, :layout => :"demo/layout"
+  haml :"demo/_#{params[:name]}".to_sym, :layout => :"demo/layout"
 end
 
 # define stylesheets
