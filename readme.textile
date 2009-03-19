@@ -2,7 +2,11 @@ h1. framer
 
 h5(intro). a web craftsman's tool, making a light task of creating wireframes and prototypes of websites.
 
+h3{text-align:right; margin-top:-1em}. <a style="color:#fff;text-decoration:none" href="http://seaofclouds.com/framer/demo.html">Demo &rarr;</a>
+
 h2. Features
+
+h4. *framer* is new and in active development. It's improving, and can use your help!
 
 * Powered with "Compass":http://compass-style.org/, "Blueprint":http://blueprintcss.org/, "HAML, SASS":http://haml.hamptoncatlin.com/, "jQuery":http://jquery.com/, "Sinatra":http://www.sinatrarb.com/, and "Ruby":http://www.ruby-lang.org/en/.
 * Lorem Ipsum generator to quickly place text.
