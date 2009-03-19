@@ -118,8 +118,7 @@ get '/' do
 end
 
 get '/demo' do
-  @bodyid = "demo"
-  haml "= RedCloth.new(File.read('./readme.textile')).to_html", :layout => :"demo/layout"
+  redirect("/")
 end
 
 get '/demo/:name' do
