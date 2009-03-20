@@ -28,19 +28,24 @@ a
       :right 0em
       :margin-bottom 0  
       
-#framer_tools
+#framer-tools
   :position absolute
   :top 0em
-  +column(4.5)
-  +prepend(.5)
-  +append(.5)
+  :left 0em
+  :z-index 9
   :background-color #333
   :color #fff
+  :padding-top 1em
+  +prepend(.5)
+  +append(.5)
+  #framer-wrap
+    +column(4.5)
+    :position relative
   h1,h2,h3,h4,h5,a
     :color #fff
-  #framer_menu
+  #framer-menu
     :padding-top 1.5em
-  #framer_colors
+  #framer-colors
     .swatch
       :margin-bottom 1em
       div

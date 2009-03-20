@@ -1,81 +1,82 @@
-#framer_tools
-  #framer_menu
-    %h3= link_to 'js', 'togglegrid', 'grid'
-    
-  #framer_colors
-    %h3 Colors
-    .swatch                   
-      .font_color &nbsp;
-      font_color           
-    .swatch                   
-      .quiet_color &nbsp;
-      quiet_color          
-    .swatch                   
-      .loud_color &nbsp;
-      loud_color           
-    .swatch                   
-      .header_color &nbsp;
-      header_color         
-    .swatch                   
-      .link_color &nbsp;
-      link_color           
-    .swatch                   
-      .link_hover_color &nbsp;
-      link_hover_color     
-    .swatch                   
-      .link_focus_color &nbsp;
-      link_focus_color     
-    .swatch                   
-      .link_active_color &nbsp;
-      link_active_color    
-    .swatch                   
-      .link_visited_color &nbsp;
-      link_visited_color   
-    .swatch                   
-      .feedback_border_color &nbsp;
-      feedback_border_color
-    .swatch                   
-      .success_color &nbsp;
-      success_color        
-    .swatch                   
-      .success_bg_color &nbsp;
-      success_bg_color     
-    .swatch                   
-      .success_border_color &nbsp;
-      success_border_color 
-    .swatch                   
-      .notice_color &nbsp;
-      notice_color         
-    .swatch                   
-      .notice_bg_color &nbsp;
-      notice_bg_color      
-    .swatch                   
-      .notice_border_color &nbsp;
-      notice_border_color  
-    .swatch                   
-      .error_color &nbsp;
-      error_color          
-    .swatch                   
-      .error_bg_color &nbsp;
-      error_bg_color       
-    .swatch                   
-      .error_border_color &nbsp;
-      error_border_color   
-    .swatch                   
-      .highlight_color &nbsp;
-      highlight_color      
-    .swatch                   
-      .added_color &nbsp;
-      added_color          
-    .swatch                   
-      .added_bg_color &nbsp;
-      added_bg_color       
-    .swatch                   
-      .removed_color &nbsp;
-      removed_color        
-    .swatch                   
-      .removed_bg_color &nbsp;
-      removed_bg_color     
+#framer-tools
+  %h3= link_to 'js', 'toggleframer', 'show tools'
+  #framer-wrap
+    #framer-menu
+      %h3= link_to 'js', 'togglegrid', 'show grid'
+    #framer-colors
+      %h3 Colors
+      .swatch                   
+        .font_color &nbsp;
+        font_color           
+      .swatch                   
+        .quiet_color &nbsp;
+        quiet_color          
+      .swatch                   
+        .loud_color &nbsp;
+        loud_color           
+      .swatch                   
+        .header_color &nbsp;
+        header_color         
+      .swatch                   
+        .link_color &nbsp;
+        link_color           
+      .swatch                   
+        .link_hover_color &nbsp;
+        link_hover_color     
+      .swatch                   
+        .link_focus_color &nbsp;
+        link_focus_color     
+      .swatch                   
+        .link_active_color &nbsp;
+        link_active_color    
+      .swatch                   
+        .link_visited_color &nbsp;
+        link_visited_color   
+      .swatch                   
+        .feedback_border_color &nbsp;
+        feedback_border_color
+      .swatch                   
+        .success_color &nbsp;
+        success_color        
+      .swatch                   
+        .success_bg_color &nbsp;
+        success_bg_color     
+      .swatch                   
+        .success_border_color &nbsp;
+        success_border_color 
+      .swatch                   
+        .notice_color &nbsp;
+        notice_color         
+      .swatch                   
+        .notice_bg_color &nbsp;
+        notice_bg_color      
+      .swatch                   
+        .notice_border_color &nbsp;
+        notice_border_color  
+      .swatch                   
+        .error_color &nbsp;
+        error_color          
+      .swatch                   
+        .error_bg_color &nbsp;
+        error_bg_color       
+      .swatch                   
+        .error_border_color &nbsp;
+        error_border_color   
+      .swatch                   
+        .highlight_color &nbsp;
+        highlight_color      
+      .swatch                   
+        .added_color &nbsp;
+        added_color          
+      .swatch                   
+        .added_bg_color &nbsp;
+        added_bg_color       
+      .swatch                   
+        .removed_color &nbsp;
+        removed_color        
+      .swatch                   
+        .removed_bg_color &nbsp;
+        removed_bg_color     
     
 - unless browser?(:firefox) || browser?(:safari)
   #framer_browser
