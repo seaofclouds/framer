@@ -13,36 +13,45 @@
   <body class='blueprint'>
     <div class='container' id='wrap'>
       <div id='header'>
-        <div class='breadcrumbs'>
-          <strong><a href='/framer/' alt='go to framer'>framer</a></strong>
-          /
-          <a href='/framer/demo' alt='go to demo'>demo</a>
-          /
-          
-        </div>
+        <h1>
+          <a href='/framer/' alt='go to framer'>framer</a>
+          / demo
+        </h1>
+        <a href="http://github.com/seaofclouds/framer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
       </div>
       <h2>Use lorem ipsum for placeholder text</h2>
       <div class='demo container'>
         <div class='example'>
-          <h3>Nulla ducimus natus assumenda</h3>
+          <h3>Voluptas voluptas</h3>
           <p>
             by
-            Raina Kemmer
-            (autaut)
+            Linnie Shanahan
+            (abminus)
           </p>
-          <p>Quisquam veritatis et consequatur ullam laboriosam. Ex ut nulla totam iusto tenetur. Magni qui est cumque ratione voluptate natus qui quae. Deserunt consequuntur autem adipisci sint expedita. Dicta accusantium aperiam consequuntur voluptas enim ut aut est.</p>
+          <p>Nobis aliquid iste consectetur unde sint ut libero quod. Aliquid est voluptas ipsam. Consequatur ut ab omnis. Quidem ducimus qui ut quo ipsam asperiores voluptatum.</p>
         </div>
         <div class='snippet'>
           <textarea>%h3= lorem(:title, 1)&#x000A;%p&#x000A;  by&#x000A;  = name(:full)&#x000A;  = name(:user)&#x000A;= lorem(:paragraph, 3)</textarea>
         </div>
       </div>
       <h2>Drop image placeholders</h2>
-      <div class='demo container'>
+      <div class='demo container' id='demo-image'>
         <div class='example'>
           <div id='demo' class='media media-image'><img class='media-crosshair' src='/framer/images/image-cross-hair.png' width='229' height='170' /><p class='media-size'>229w x 170h</p><p class='media-text'>just a silly placeholder image</p></div>
         </div>
         <div class='snippet'>
           <textarea>= media(:image, :demo, 229, 170, 'just a silly placeholder image')</textarea>
+        </div>
+      </div>
+      <h2>Quickly link views, sites and javascripts</h2>
+      <div class='demo container' id='demo-link'>
+        <div class='example'>
+          <h3><a href='javascript:void(0);' class='togglegrid'>toggle grid</a></h3>
+          <h3><a href='http://github.com/seaofclouds/framer' alt='go to framer on github &rarr;'>framer on github &rarr;</a></h3>
+          <h3><a href='http://islostonyet.com' alt='go to is lost on yet? &rarr;'>is lost on yet? &rarr;</a></h3>
+        </div>
+        <div class='snippet'>
+          <textarea>%h4= link_to("view", "http://github.com/seaofclouds/framer", "framer on github &rarr;")&#x000A;%h4= link_to('js', 'togglegrid', 'grid')</textarea>
         </div>
       </div>
     </div>
