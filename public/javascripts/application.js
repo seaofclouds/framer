@@ -54,7 +54,7 @@ $(document).ready(function(){
   });
   // toggle framer menu with cookie
   var framertools = $.cookie('framertools'); 
-  if (framertools == 'false' || framertools == undefined) {
+  if (framertools == 'visible' || framertools == undefined) {
     $("#framer-tools .toggleframer").text("hide tools");
     $("#framer-tools #framer-wrap").show();
     }else{
