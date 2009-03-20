@@ -1,0 +1,12 @@
+%h2 Quickly link views, sites and javascripts
+  
+#demo-link.demo.container
+  .example
+    %h3= link_to('js', 'togglegrid', 'toggle grid')
+    %h3= link_to("view", "http://github.com/seaofclouds/framer", "framer on github &rarr;")
+    %h3= link_to("view", "http://islostonyet.com", "is lost on yet? &rarr;")
+  .snippet
+    %textarea
+      :preserve
+        %h4= link_to("view", "http://github.com/seaofclouds/framer", "framer on github &rarr;")
+        %h4= link_to('js', 'togglegrid', 'grid')
