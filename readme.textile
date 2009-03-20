@@ -49,6 +49,7 @@ h2. Thanks
 
 * "blake mizerany":http://github.com/bmizerany, for sinatra. awesome, awesome sinatra.
 * "hampton catlin":http://github.com/hcatlin for haml, sass and making my life so much easier.
+* "ryan tomayko":http://github.com/rtomayko for staticizer, something i've wanted to do in sinatra for a long time.
 * "chris eppstein":http://github.com/chriseppstein, for compass. without it, i never would have used blueprint.
 * "christian montoya":http://christianmontoya.com for blueprint
 * to all you CSS developers out there who strive for something better, and easier
