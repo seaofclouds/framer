@@ -11,13 +11,11 @@
     %script{:language=>"javascript",  :src=>"/javascripts/application.js", :type=>"text/javascript"}
   %body{bodyselectors}
     #wrap.container
-      - unless @bodyid == "demo"
-        #header
-          .breadcrumbs          
-            %strong= link_to("view", "/", "framer")
-            \/
-            = link_to("view", "/demo", "demo")
-            \/
-            = params[:name]
+      #header
+        - unless @bodyid == "demo"
+          %h1
+            = link_to("view", "/", "framer")
+            \/ demo
+        <a href="http://github.com/seaofclouds/framer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
       = yield
     = partial :tools
