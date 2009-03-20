@@ -15,7 +15,7 @@ $(document).ready(function(){
   });
   // toggle grid with cookie
   var framergrid = $.cookie('framergrid'); 
-  if (framergrid == 'visible' || framergrid == undefined) {
+  if (framergrid == 'visible') {
     $("#wrap").addClass("showgrid");
     $("#framer-tools .togglegrid").text("hide grid");
     }else{
