@@ -384,4 +384,4 @@ body #wrap .demo .example { float: left; width: 230px; margin-right: 10px; }
 body #wrap .demo .snippet { float: left; width: 270px; margin-right: 10px; padding-left: 40px; background-image: url(/framer/images/demo/arrow-left.png); background-repeat: no-repeat; background-position: left top; }
 body #wrap .demo .snippet textarea { border: none; height: 150px; width: 300px; color: #2b3303; }
 body #wrap #demo-image { margin-bottom: 2em; }
-body #wrap #demo-link textarea { height: 90px; }
+body #wrap #demo-link textarea { height: 100px; }
