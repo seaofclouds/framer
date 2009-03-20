@@ -13,6 +13,7 @@ h4. *framer* is new and in active development. It's improving, and can use your 
 * Fake content with "faker":http://faker.rubyforge.org/, and make it easy to design a user-centered experience.
 * Helpers make everything from generating links to dropping placeholder images a few keystrokes away.
 * Design palette for easy color reference, grid toggling and other bits.
+* Automatically generate static views to share with clients.
 
 h2. Download
 
@@ -35,13 +36,17 @@ h3. *2.* run it
 
 @cd framer@<br />@ruby framer.app@
 
+visit "http://localhost:4567/":http://localhost:4567/ in your browser.
+
 h3. *3.* haxxxx!
+
+edit views, stylesheets and javascript with tools you know: jquery, haml, sass, and ruby.
 
 *framer* is new and in active development. It's improving, and can use your help!
 
 h2. Contribute
 
-Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer and help us develop new features for tweet!
+Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer and help us develop new features for framer!
 
 @git clone git://github.com/seaofclouds/tweet.git@
 
