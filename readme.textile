@@ -48,7 +48,7 @@ h2. Contribute
 
 Bring your code slinging skills to "Github":http://github.com/seaofclouds/framer and help us develop new features for framer!
 
-@git clone git://github.com/seaofclouds/tweet.git@
+@git clone git://github.com/seaofclouds/framer.git@
 
 h2. Thanks
 
