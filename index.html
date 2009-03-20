@@ -1,3 +1,47 @@
+<!--
+        __                                     
+       / _|                                    
+      | |_  _ __   __ _  _ __ ___    ___  _ __ 
+      |  _|| '__| / _` || '_ ` _ \  / _ \| '__|
+      | |  | |   | (_| || | | | | ||  __/| |   
+      |_|  |_|    \__,_||_| |_| |_| \___||_|   
+
+          =                                             
+        ,:M~,:.                               . .       
+          DIM+DO:  .                          .8M       
+        N87..OMN8DM...                          M?      
+          NMO.,DMZON8.                          M?$.    
+            DNM.:Z$8ZZ+.                        8M8I    
+             ..~=. O8MNMIO.                     ,M,Z    
+                .I=. +NMNDDN.                    MI+N   
+                   O$,.:DMNDDM,.                .M.OM.  
+                  ...MO?..8MO7D8                .M~N$.  
+            ..      ...:=$ .D7D:I.:.            MM8N7.  
+          .MM$          . ~+  DOD?7N+. .        MMINO,  
+          .MD.            ..:=..ONMOMOMM    .  MMZ 8Z   
+          ?I                  I:  ?MMMMNMMMMMNMMM,~~N   
+         D8.                    8NN.OM+NMMMMMMMM$.M7~.  
+         D.                     ..DMMZNMMMZ8D7MMND8$M   
+        I:..                      .,=8NNMIOM7MDMMZMM    
+       ND           . ..             MMMMMMMMNM8=OM     
+       D .        I8ZO=.             MMMMM8M8NO77M      
+      ?...         O?..              MMM+DD,7MNZM  .    
+    .8N   MM$ ..  .N.. DM?.         .MMNM~.IMMOM        
+    .8.   .:M~?   .=.. M7MM        .$MDMM   =DM         
+   .D     .MI.     : 7I. M ..      NIMII?+MMM? .        
+   NO.    .? .    .7MN...M~M .   ?8ZM..$MMI             
+  ,7..    .O.      NN   7M NM  MM+?$~..MD...            
+  N..     M~..   ~MM.  77     MMMM88  MM..              
+          =   ..N8,$.$M        MMM8MNMD?                
+          =..  NN +=NM          +M8NMMM.                
+          .. ,=  .8N. .          ..~MM .                
+            NM   MN ..              .                   
+           O8   8 N                                     
+          Z.  ZM .$                                     
+          . .N .  8                                     
+           ~? ..   .                                    
+          ...
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -8,6 +52,7 @@
     <meta content='en-us' http-equiv='Content-Language' />
     <link href='/framer/stylesheets/demo.css' media='screen' rel='stylesheet' type='text/css' />
     <script language='javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js' type='text/javascript'></script>
+    <script language='javascript' src='/framer/javascripts/jquery.cookie.js' type='text/javascript'></script>
     <script language='javascript' src='/framer/javascripts/application.js' type='text/javascript'></script>
   </head>
   <body class='blueprint' id='demo'>
@@ -56,109 +101,121 @@
       </ul>
       <h2><a href="http://www.opensource.org/licenses/mit-license.php">Licensed under the <span class="caps">MIT</span> License</a></h2>
     </div>
-    <div id='framer_tools'>
-      <div id='framer_menu'>
-        <h3><a href='javascript:void(0);' class='togglegrid'>grid</a></h3>
-      </div>
-      <div id='framer_colors'>
-        <h3>Colors</h3>
-        <div class='swatch'>
-          <div class='font_color'>&nbsp;</div>
-          font_color
+    <div id='framer-tools'>
+      <h3><a href='javascript:void(0);' class='toggleframer'>show tools</a></h3>
+      <div id='framer-wrap'>
+        <div id='framer-menu'>
+          <h3><a href='javascript:void(0);' class='togglegrid'>show grid</a></h3>
         </div>
-        <div class='swatch'>
-          <div class='quiet_color'>&nbsp;</div>
-          quiet_color
-        </div>
-        <div class='swatch'>
-          <div class='loud_color'>&nbsp;</div>
-          loud_color
-        </div>
-        <div class='swatch'>
-          <div class='header_color'>&nbsp;</div>
-          header_color
-        </div>
-        <div class='swatch'>
-          <div class='link_color'>&nbsp;</div>
-          link_color
-        </div>
-        <div class='swatch'>
-          <div class='link_hover_color'>&nbsp;</div>
-          link_hover_color
-        </div>
-        <div class='swatch'>
-          <div class='link_focus_color'>&nbsp;</div>
-          link_focus_color
-        </div>
-        <div class='swatch'>
-          <div class='link_active_color'>&nbsp;</div>
-          link_active_color
-        </div>
-        <div class='swatch'>
-          <div class='link_visited_color'>&nbsp;</div>
-          link_visited_color
-        </div>
-        <div class='swatch'>
-          <div class='feedback_border_color'>&nbsp;</div>
-          feedback_border_color
-        </div>
-        <div class='swatch'>
-          <div class='success_color'>&nbsp;</div>
-          success_color
-        </div>
-        <div class='swatch'>
-          <div class='success_bg_color'>&nbsp;</div>
-          success_bg_color
-        </div>
-        <div class='swatch'>
-          <div class='success_border_color'>&nbsp;</div>
-          success_border_color
-        </div>
-        <div class='swatch'>
-          <div class='notice_color'>&nbsp;</div>
-          notice_color
-        </div>
-        <div class='swatch'>
-          <div class='notice_bg_color'>&nbsp;</div>
-          notice_bg_color
-        </div>
-        <div class='swatch'>
-          <div class='notice_border_color'>&nbsp;</div>
-          notice_border_color
-        </div>
-        <div class='swatch'>
-          <div class='error_color'>&nbsp;</div>
-          error_color
-        </div>
-        <div class='swatch'>
-          <div class='error_bg_color'>&nbsp;</div>
-          error_bg_color
-        </div>
-        <div class='swatch'>
-          <div class='error_border_color'>&nbsp;</div>
-          error_border_color
-        </div>
-        <div class='swatch'>
-          <div class='highlight_color'>&nbsp;</div>
-          highlight_color
-        </div>
-        <div class='swatch'>
-          <div class='added_color'>&nbsp;</div>
-          added_color
-        </div>
-        <div class='swatch'>
-          <div class='added_bg_color'>&nbsp;</div>
-          added_bg_color
-        </div>
-        <div class='swatch'>
-          <div class='removed_color'>&nbsp;</div>
-          removed_color
-        </div>
-        <div class='swatch'>
-          <div class='removed_bg_color'>&nbsp;</div>
-          removed_bg_color
+        <div id='framer-colors'>
+          <h3>Colors</h3>
+          <div class='swatch'>
+            <div class='font_color'>&nbsp;</div>
+            font_color
+          </div>
+          <div class='swatch'>
+            <div class='quiet_color'>&nbsp;</div>
+            quiet_color
+          </div>
+          <div class='swatch'>
+            <div class='loud_color'>&nbsp;</div>
+            loud_color
+          </div>
+          <div class='swatch'>
+            <div class='header_color'>&nbsp;</div>
+            header_color
+          </div>
+          <div class='swatch'>
+            <div class='link_color'>&nbsp;</div>
+            link_color
+          </div>
+          <div class='swatch'>
+            <div class='link_hover_color'>&nbsp;</div>
+            link_hover_color
+          </div>
+          <div class='swatch'>
+            <div class='link_focus_color'>&nbsp;</div>
+            link_focus_color
+          </div>
+          <div class='swatch'>
+            <div class='link_active_color'>&nbsp;</div>
+            link_active_color
+          </div>
+          <div class='swatch'>
+            <div class='link_visited_color'>&nbsp;</div>
+            link_visited_color
+          </div>
+          <div class='swatch'>
+            <div class='feedback_border_color'>&nbsp;</div>
+            feedback_border_color
+          </div>
+          <div class='swatch'>
+            <div class='success_color'>&nbsp;</div>
+            success_color
+          </div>
+          <div class='swatch'>
+            <div class='success_bg_color'>&nbsp;</div>
+            success_bg_color
+          </div>
+          <div class='swatch'>
+            <div class='success_border_color'>&nbsp;</div>
+            success_border_color
+          </div>
+          <div class='swatch'>
+            <div class='notice_color'>&nbsp;</div>
+            notice_color
+          </div>
+          <div class='swatch'>
+            <div class='notice_bg_color'>&nbsp;</div>
+            notice_bg_color
+          </div>
+          <div class='swatch'>
+            <div class='notice_border_color'>&nbsp;</div>
+            notice_border_color
+          </div>
+          <div class='swatch'>
+            <div class='error_color'>&nbsp;</div>
+            error_color
+          </div>
+          <div class='swatch'>
+            <div class='error_bg_color'>&nbsp;</div>
+            error_bg_color
+          </div>
+          <div class='swatch'>
+            <div class='error_border_color'>&nbsp;</div>
+            error_border_color
+          </div>
+          <div class='swatch'>
+            <div class='highlight_color'>&nbsp;</div>
+            highlight_color
+          </div>
+          <div class='swatch'>
+            <div class='added_color'>&nbsp;</div>
+            added_color
+          </div>
+          <div class='swatch'>
+            <div class='added_bg_color'>&nbsp;</div>
+            added_bg_color
+          </div>
+          <div class='swatch'>
+            <div class='removed_color'>&nbsp;</div>
+            removed_color
+          </div>
+          <div class='swatch'>
+            <div class='removed_bg_color'>&nbsp;</div>
+            removed_bg_color
+          </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-7980623-2");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
   </body>
 </html>
