@@ -8,8 +8,8 @@ require 'faker'
 require 'compass'
 require 'sinatra'
 require 'haml'
-require 'staticizer'
 
+require 'staticizer'
 use Staticizer, "./static"
 
 # set variables
@@ -40,7 +40,7 @@ helpers do
   def partial(page, options={})
     haml "_#{page}".to_sym, options.merge!(:layout => false)
   end
-    
+  
   def bodyselectors
     klass = "blueprint"
     klass += " #{@bodyclass}" if @bodyclass
@@ -125,6 +125,11 @@ get '/demo' do
   haml :"demo/index".to_sym, :layout => :"demo/layout"
 end
 
+get '/demo/showtools' do
+  @showtools = true
+  haml :"demo/index".to_sym, :layout => :"demo/layout"
+end
+
 # define stylesheets
 
 get '/stylesheets/:name.css' do
@@ -133,8 +138,13 @@ get '/stylesheets/:name.css' do
 end
 
 # define app pages
- 
+
 get '/:name' do
-  @bodyid = "#{params[:name]}"
+  @bodyid = params[:name].gsub(/[!@\#$%&:?,\.\/-\;]/im, '_')
   haml params[:name].to_sym
+end
+get %r{/(.*?)/showtools} do |n|
+  @bodyid = n.gsub(/[!@\#$%&:?,\.\/-\;]/im, '_')
+  @showtools = true
+  haml n.to_sym
 end
